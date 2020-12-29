@@ -17,7 +17,9 @@ eureka:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
   
-#zuul: # routes:  #  item-service: /item-service/**
+#zuul:
+ # routes:
+  #  item-service: /item-service/**
    # user-service: /user-service/**
     #order-service: /order-service/**
     
@@ -37,5 +39,8 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 500
-management:  endpoints:
-    web:      exposure:        include: hystrix.stream    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream    
